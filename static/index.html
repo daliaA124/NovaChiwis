@@ -1,0 +1,177 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NovaChiwis | Tu tienda en línea</title>
+
+    <link rel="stylesheet" href="/static/styles.css">
+</head>
+
+<body>
+
+    <header class="header">
+        <div class="logo">
+            <span>✦</span> NovaChiwis <span>✦</span>
+        </div>
+
+        <nav class="navigation">
+            <a href="#inicio">Inicio</a>
+            <a href="#catalogo">Productos</a>
+            <a href="#nosotros">Nosotros</a>
+        </nav>
+
+        <div class="header-actions">
+            <button class="admin-button" onclick="mostrarAdmin()">
+                ⚙ Administrar
+            </button>
+        </div>
+    </header>
+
+
+    <section class="hero" id="inicio">
+        <div class="hero-content">
+            <span class="tag">BIENVENIDO A NOVACHIWIS</span>
+
+            <h1>Encuentra lo que buscas,
+                <span>al mejor precio.</span>
+            </h1>
+
+            <p>
+                Descubre nuestros productos y disfruta
+                de una experiencia de compra sencilla.
+            </p>
+
+            <a href="#catalogo" class="main-button">
+                Explorar productos →
+            </a>
+        </div>
+
+        <div class="hero-decoration">
+            <div class="hero-icon">🛍️</div>
+        </div>
+    </section>
+
+
+    <section class="benefits">
+        <div>🚚 <strong>Compras fáciles</strong>🚚</div>
+        <div>⭐ <strong>Calidad y variedad</strong>⭐</div>
+        <div>💜 <strong>Atención personalizada</strong>💜</div>
+    </section>
+
+
+    <main class="catalog" id="catalogo">
+
+        <div class="section-heading">
+            <div>
+                <span class="tag">NUESTRO CATÁLOGO</span>
+                <h2>Productos destacados</h2>
+                <p>Explora los productos disponibles en nuestra tienda.</p>
+            </div>
+        </div>
+
+        <div class="search-container">
+            <input
+                type="text"
+                id="buscador"
+                placeholder="Buscar un producto..."
+            >
+
+            <button onclick="buscarProductos()">🔍 Buscar</button>
+        </div>
+
+        <div id="productos-container" class="products-grid">
+            <p>Cargando productos...</p>
+        </div>
+
+    </main>
+
+
+    <section class="admin-section" id="administracion">
+
+        <div class="section-heading">
+            <span class="tag">PANEL DE CONTROL</span>
+            <h2>Administración de la tienda</h2>
+            <p>Gestiona la información de tu negocio.</p>
+        </div>
+
+        <div class="admin-grid">
+
+            <button onclick="mostrarSeccion('productos')">
+                📦 <strong>Productos</strong> 
+                <small>Administrar inventario</small>
+            </button>
+
+            <button onclick="mostrarSeccion('categorias')">
+                🗂️ <strong>Categorías</strong> 
+                <small>Organizar productos</small>
+            </button>
+
+            <button onclick="mostrarSeccion('proveedores')">
+                🚚 <strong>Proveedores</strong> 
+                <small>Administrar proveedores</small>
+            </button>
+
+            <button onclick="mostrarSeccion('clientes')">
+                👥 <strong>Clientes</strong> 
+                <small>Administrar clientes</small>
+            </button>
+
+        </div>
+
+        <div id="admin-contenido" class="admin-content">
+            <h3>Panel de administración</h3>
+            <p>Selecciona una sección para administrar sus registros.</p>
+        </div>
+
+    </section>
+
+
+    <button class="chat-button" onclick="alternarChat()">
+        💬
+    </button>
+
+    <section class="chat-window" id="chat-window">
+
+        <div class="chat-header">
+            <div>
+                <strong>Asistente Chiwis</strong>
+                <small>En línea · Atención virtual</small>
+            </div>
+
+            <button onclick="alternarChat()">✕</button>
+        </div>
+
+        <div class="chat-messages" id="chat-messages">
+            <div class="bot-message">
+                ¡Hola! 👋 Soy el asistente de Chiwis.
+                ¿En qué puedo ayudarte?
+            </div>
+        </div>
+
+        <form id="chat-form" class="chat-input">
+            <input
+                type="text"
+                id="chat-text"
+                placeholder="Escribe tu mensaje..."
+                autocomplete="off"
+            >
+
+            <button type="submit">➤</button>
+        </form>
+
+    </section>
+
+
+    <footer id="nosotros">
+        <h3>✦ NovaChiwis ✦</h3>
+        <p>Tu tienda en línea, siempre a tu alcance.</p>
+        <small>© 2026 NovaChiwis. Todos los derechos reservados.</small>
+    </footer>
+
+
+    <script src="/static/app.js"></script>
+
+</body>
+</html>
